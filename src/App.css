@@ -1,0 +1,406 @@
+.nav {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aurora {
+    color: beige;
+    font-weight: 400px;
+    font-size: 65px;
+
+    font-family: "Allura";
+}
+
+
+.two {
+    position: relative;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+}
+
+.links {
+    text-decoration: none;
+    font-weight: 700px;
+    font-weight: bold;
+    color: white;
+
+
+}
+
+.links:hover {
+    text-decoration: underline;
+    color: rgb(210, 5, 5);
+
+    transition: 3s, all, ease;
+
+}
+
+.icons li {
+    list-style-type: none;
+    display: flex;
+    gap: 6px;
+
+}
+
+.black {
+    color: rgb(255, 252, 252);
+}
+
+.black:hover {
+    color: red;
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.bookbtn {
+    background-color: #1202a2;
+    padding: 13px 20px;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    font-family: "Adamina", serif;
+
+}
+
+.bookbtn:hover {
+    background-color: #2506d6;
+    transition: all 0.6s ease;
+}
+
+.recommended {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-family: "Playfair Display", serif;
+
+}
+
+.recommended h1 {
+    font-size: 55px;
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.rphoto {
+
+
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: auto;
+}
+
+.rphoto:hover {
+    border-radius: 16px;
+    transform: scale(1.1);
+
+}
+
+.ph2 {
+    margin-top: 25px;
+}
+
+.ph4 {
+    margin-top: 20px;
+}
+
+.ph6 {
+    margin-top: 30px;
+}
+
+.second {
+    margin-top: 30px;
+
+}
+
+
+.right {
+    color: white;
+}
+
+
+.right:hover {
+    transition: all 0.8s ease-in-out;
+    padding-inline-start: 5px;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+.headtext {
+
+    left: 600px;
+    top: 300px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.more {
+    width: 100px;
+    margin: 20px;
+    height: 40px;
+    background-color: bisque;
+    border: none;
+    border-radius: 6px;
+
+}
+
+.more:hover {
+    transition: all 0.8s ease-in-out;
+    padding-inline-start: 5px;
+    cursor: grab;
+}
+.fparallax{
+    text-align: center;
+    height: 500px;
+    object-fit: cover;
+    background-image: url("07hero.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat
+}
+.fparallax
+.parallax {
+    width: 100%;
+    height: 500px;
+    font-family: "Adamina", serif;
+    /* object-fit: cover;
+    background-image: url("07hero.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-size: cover;
+    color: rgb(12, 12, 12);
+    background-color: grey;
+   
+
+}
+
+.addbtn {
+
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    
+    border:2px solid navy ;
+    border-radius: 9999px;
+    background-color:transparent;
+    font-family:"Adamina", serif ; 
+    color: white;
+
+}
+.addicon{
+    width: 50px;
+    color: navy;
+    height:50px;
+}
+.addicon:hover{
+    cursor: pointer;
+    color: red;
+    transition: 0.7s ease-in-out\;
+}
+
+.block {
+    width: 70px;
+    height: 70px;
+    margin-top: 110px;
+    margin-bottom: 20px;
+    padding: 6px;
+    color: rgb(8, 3, 90);
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.first {
+    padding-right: 20px;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 70px;
+    align-items: center;
+
+
+}
+
+input {
+    padding: 20px 80px;
+    border-radius: 30px;
+    border: 1px solid rgb(68, 128, 208);
+    cursor: pointer;
+    display: flex;
+}
+
+#textarea {
+    padding: 30px 85px;
+    border-radius: 20px;
+    border: 1px solid rgb(68, 128, 208);
+    cursor: pointer;
+}
+
+.question {
+    margin-top: 20px;
+}
+
+.envlope {
+    width: 300px;
+    height: 300px;
+    margin-top: 120px;
+    margin-right: 70px;
+    color: #3d8484;
+
+}
+
+.send {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    width: 350px;
+    height: 70px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+
+}
+
+.send:hover {
+    background-image: linear-gradient(to right, #138347, #dcce12, #138091, #b9bf0e);
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+
+}
+
+.about {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.txt {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.txt:hover {
+    color: red;
+    background-position: 100% 0;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+
+}
+
+/* ADD PAGE STYLE  */
+
+/* src/Add.css */
+
+.add-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f4e2e2;
+
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+    background-color: #0f0658;
+    color: white;
+    border: none;
+    border-radius: 50px;
+}
+
+.form-buttons button[type="button"] {
+    background-color: #920412;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: "Adamina", serif;
+}
