@@ -17,9 +17,24 @@ const Add = () => {
     console.log('File:', file);
   };
   
+
+  const onSubmit = (data) => {
+    axios.post('http://localhost:3000/data/', { ...data, file: image })
+    .then(res=>console.log(res.data))
+  }
+
+  const convertToBase64 =(file)=>{
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setimage(reader.result)
+    }
+   }
+
   return (
    <>
    <Navbar/>
+   
     <div className="add-page">
       <form onSubmit={handleSubmit}>
         <div className="form-group">

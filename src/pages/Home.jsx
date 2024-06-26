@@ -75,7 +75,8 @@ function Home() {
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph5"><img src="6.jpg" className='rphoto'  alt="" /><Link to='/more'><button className='viewmore'>view more</button></Link></div>
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph6"><img src="11.jpg"  className='rphoto' alt="" /><Link to='/more'><button className='viewmore'>view more</button></Link></div>
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph7"><img src="3.jpg" className='rphoto'  alt="" /><Link to='/more'><button className='viewmore'>view more</button></Link></div>
-            <div className="col-lg-3 col-md-6 col-sm-12 photo ph8"><Link to='/more'><button className='viewmore'>view more</button></Link></div>
+            <div className="col-lg-3 col-md-6 col-sm-12 photo ph6"><img src="8.jpg"  className='rphoto' alt="" /><Link to='/more'><button className='viewmore'>view more</button></Link></div>
+            
          
           </div>
          </div>
