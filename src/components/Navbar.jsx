@@ -1,27 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { GrInstagram } from "react-icons/gr";
-import { SlEnvolopeLetter } from "react-icons/sl";
-import { SlArrowRight } from "react-icons/sl";
-import Home from '../pages/Home';
-import Footer from './Footer';
+
 function Navbar() {
   return (
     <>
       <div className="nav">
-      <p className='aurora'>Aurora</p>
+      <p className='lumina'>Lumina</p>
        
           <ul>
-            
             <li><Link to='/' className="links">Home</Link></li>
-            <li><Link className="links">Pages</Link></li>
-            <li> <Link to='/admin' className="links" >About</Link></li>
+            <li> <Link to='/about' className="links" >About</Link></li>
             <li><Link to='/contact' className="links">Contact</Link ></li>
-           
+            <li><Link to='/admin' className="links">Admin</Link></li>
           </ul>
-          <Link to='/admin'> <button className='bookbtn'>Admin <SlArrowRight className="right" /> </button></Link>
+        
+       <ul>
+        <li><Link to='/login' className='links'>Log in </Link></li>
+       </ul>
          
       </div>
     </>

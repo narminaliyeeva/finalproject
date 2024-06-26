@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 
 const Add = () => {
   const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
   const [tags, setTags] = useState('');
   const [publishDate, setPublishDate] = useState('');
   const [file, setFile] = useState(null);
@@ -13,7 +12,6 @@ const Add = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log('Title:', title);
-    console.log('Content:', content);
     console.log('Tags:', tags);
     console.log('Publish Date:', publishDate);
     console.log('File:', file);
@@ -35,16 +33,7 @@ const Add = () => {
             />
           </label>
         </div>
-        <div className="form-group">
-          <label>
-            Content:
-            <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              required
-            ></textarea>
-          </label>
-        </div>
+        
         <div className="form-group">
           <label>
             Tags:

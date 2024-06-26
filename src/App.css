@@ -1,11 +1,22 @@
 .nav {
-    background-color: rgb(0, 0, 0);
+    background-color: #11235A;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px;
 }
 
-.aurora {
+.content {
+    padding-top: 80px;
+    /* Navbar'ın yüksekliği kadar bir boşluk bırakarak içeriği kaydırın */
+}
+
+.lumina {
     color: beige;
     font-weight: 400px;
     font-size: 65px;
@@ -74,7 +85,7 @@ ul li {
 }
 
 .bookbtn {
-    background-color: #1202a2;
+    background-color: #596FB7;
     padding: 13px 20px;
     color: white;
     border-radius: 30px;
@@ -96,7 +107,7 @@ ul li {
 }
 
 .recommended h1 {
-    font-size: 55px;
+    font-size: 45px;
     font-family: "Playfair Display", serif;
     font-weight: bold;
 }
@@ -119,7 +130,7 @@ ul li {
     cursor: pointer;
     transition: transform 0.6s ease;
     width: 100%;
-    height: auto;
+
 }
 
 .rphoto:hover {
@@ -136,8 +147,24 @@ ul li {
     margin-top: 20px;
 }
 
+.ph5 {
+    width: 300px;
+
+}
+
 .ph6 {
+    width: 280px;
     margin-top: 30px;
+}
+
+.ph7 {
+    width: 310px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ph8 {
+    width: 320px;
 }
 
 .second {
@@ -156,13 +183,7 @@ ul li {
     padding-inline-start: 5px;
 }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
 
-}
 
 .headtext {
 
@@ -189,51 +210,44 @@ td {
     padding-inline-start: 5px;
     cursor: grab;
 }
-.fparallax{
-    text-align: center;
-    height: 500px;
-    object-fit: cover;
-    background-image: url("07hero.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat
-}
-.fparallax
-.parallax {
-    width: 100%;
-    height: 500px;
-    font-family: "Adamina", serif;
-    /* object-fit: cover;
-    background-image: url("07hero.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat; */
-    background-size: cover;
-    color: rgb(12, 12, 12);
-    background-color: grey;
-   
 
+.sidebarh {
+    font-size: 2.5rem;
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+.sidebarh:hover {
+    color: #2d06de;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+}
+
 
 .addbtn {
 
     position: fixed;
     bottom: 60px;
     right: 0;
-    
-    border:2px solid navy ;
+    border: 2px solid 596FB7;
     border-radius: 9999px;
-    background-color:transparent;
-    font-family:"Adamina", serif ; 
+    background-color: transparent;
+    font-family: "Adamina", serif;
     color: white;
 
 }
-.addicon{
+
+.addicon {
     width: 50px;
     color: navy;
-    height:50px;
+    height: 50px;
 }
-.addicon:hover{
+
+.addicon:hover {
     cursor: pointer;
     color: red;
     transition: 0.7s ease-in-out\;
@@ -249,9 +263,48 @@ td {
     border-radius: 5px;
     border: 2px solid rgb(0, 0, 0);
 }
+.block-icons{
+    width: 320px;
+    border: 1px solid rgb(229, 220, 220);
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.block-icons:hover{
+    background-color: rgb(224, 223, 239);
+    border: 1px solid rgb(216, 214, 211);
+    color: rgb(61, 54, 54);
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+    -moz-box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+    box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+}
 
 .first {
     padding-right: 20px;
+}
+
+.viewmore {
+    margin-top: 35px;
+    padding: 8px 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #ebe2e2;
+    color: black;
+}
+
+
+
+.viewmore:hover {
+    background-color: #596FB7;
+    color: white;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
 }
 
 .inputs {
@@ -267,7 +320,7 @@ td {
 input {
     padding: 20px 80px;
     border-radius: 30px;
-    border: 1px solid rgb(68, 128, 208);
+    border: 1px solid #596FB7;
     cursor: pointer;
     display: flex;
 }
@@ -275,12 +328,14 @@ input {
 #textarea {
     padding: 30px 85px;
     border-radius: 20px;
-    border: 1px solid rgb(68, 128, 208);
+    border: 1px solid #596FB7;
     cursor: pointer;
 }
 
 .question {
     margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
 }
 
 .envlope {
@@ -288,9 +343,10 @@ input {
     height: 300px;
     margin-top: 120px;
     margin-right: 70px;
-    color: #3d8484;
+    color: rgb(2, 2, 111);
 
 }
+
 
 .send {
     width: 200px;
@@ -307,13 +363,13 @@ input {
     height: 70px;
     border-radius: 30px;
     margin-top: 30px;
-    background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+    background-image: linear-gradient(to left, #333735, rgb(84, 73, 73), navy, rgb(141, 5, 5));
     box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
 
 }
 
 .send:hover {
-    background-image: linear-gradient(to right, #138347, #dcce12, #138091, #b9bf0e);
+    background-image: linear-gradient(to right, #131983, #075d01, #037a8d, #f90147);
     background-position: 100% 0;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
@@ -323,7 +379,7 @@ input {
 }
 
 .about {
-    margin-top: 70px;
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     text-align: center;
@@ -348,22 +404,20 @@ input {
 
 /* ADD PAGE STYLE  */
 
-/* src/Add.css */
-
 .add-page {
-    max-width: 600px;
+
     margin: 0 auto;
     padding: 20px;
-    margin-top: 30px;
-    border: 1px solid #ddd;
+    margin-top: 50px;
+    border: 1px solid #f0e6e3;
     border-radius: 8px;
-    background-color: #f4e2e2;
+    background-color: #ede6e4;
 
 }
 
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 .form-group label {
@@ -375,7 +429,7 @@ input {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 8px;
+    padding: 11px;
     box-sizing: border-box;
 }
 
@@ -385,22 +439,483 @@ input {
 }
 
 .form-buttons button {
-    padding: 10px 20px;
+    width: 200px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .form-buttons button[type="submit"] {
+
     background-color: #0f0658;
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 .form-buttons button[type="button"] {
-    background-color: #920412;
+    background-color: #7e020e;
     color: white;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     font-family: "Adamina", serif;
+}
+
+
+
+form {
+
+    margin-top: 160px;
+    width: 700px;
+    margin-left: 350px;
+}
+
+form .block {
+    width: 200px;
+}
+
+.morephotos {
+    margin-top: 140px
+}
+
+.container {
+    margin-top: 120px;
+
+}
+
+/* src/Dashboard.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #050061;
+    color: white;
+    padding: 20px;
+    padding-right: 5px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    background-color: #727179;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.content h2 {
+    margin-top: 0;
+}
+
+.content {
+    transition: transform 0.1s ease;
+    /* Animasyonlu geçiş */
+}
+
+.content-hidden {
+    transform: translateX(-500px);
+    /* İçeriği sola kaydırarak gizle */
+}
+
+.sidebar-hidden {
+    transform: translateX(-250px);
+    /* Sidebar'ı sola kaydırarak gizle */
+}
+
+.footicon {
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-right: 5px;
+
+}
+
+.footicon:hover {
+    background-color: navy;
+}
+
+.auth-form-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.button-group button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+.button-group button.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-form input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Tüm ekranı kaplasın */
+    padding: 20px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.auth-toggle button {
+    padding: 10px 20px;
+    border: none;
+    background: #ccc;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.auth-toggle .active {
+    background: #160cc8;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    /* Formların genişliği */
+}
+
+.login-form,
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+form div {
+    margin-bottom: 15px;
+    width: 100%;
+    /* Form elemanlarının genişliği */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background: #160cc8;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background: #5f7adc;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+a {
+    margin-left: auto;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    margin-top: 20px;
+    width: 100%;
+    /* Sosyal giriş butonlarının genişliği */
+}
+
+.social-login button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.register-form form {
+    margin-left: 20px;
+    margin-bottom: 120px;
+}
+
+.login-form form {
+    margin-left: 20px;
+
+}
+
+.admin {
+    margin-top: 130px;
+}
+
+/* About Page */
+.about-content {
+    margin-top: 150px;
+}
+
+.vision {
+    font-size: 45px;
+    font-weight: bold;
+    padding: 20px;
+    color: rgb(60, 54, 54);
+
+}
+
+.vision:hover {
+    color: navy;
+    text-decoration-line: underline;
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.about-text {
+
+    font-size: 20px;
+    text-align: start;
+    width: 900px;
+    margin-left: 20px;
+    color: rgb(57, 50, 50);
+    cursor: pointer;
+   
+}
+.about-text:hover{
+    color: #231c9e
+}
+.offer {
+    width: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 25px;
+    padding-top: 10px;
+}
+
+.about-content li {
+    border: 1px solid rgb(216, 214, 211);
+    width: 530px;
+    height: 180px;
+    font-size: 19px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(61, 54, 54);
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+    -moz-box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+    box-shadow: -6px 6px 13px -4px rgba(181, 167, 181, 0.68);
+
+}
+
+.about-content li:hover {
+    
+    background-color: rgb(216, 214, 211);
+}
+
+.bold {
+    font-weight: bold;
+    color: rgb(60, 54, 54);
+    cursor: pointer;
+}
+
+.serve {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.serve:hover {
+    color: navy;
+    text-decoration-line: underline;
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.serve-text {
+
+    font-size: 20px;
+    color: rgb(61, 54, 54);
+    margin-left: 20px;
+}
+.serve-text:hover{
+    cursor: pointer;
+    color: #231c9e;
+}
+
+.page-footer {
+    background-color: gray;
+    margin-top: 120px;
+}
+
+.footer-text {
+    padding-top: 40px;
+    padding-left: 20px;
+    text-align: start;
+}
+
+.footer-text:hover {
+    color: red;
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.footer-icons {
+    padding: 5px;
+    padding-top: 10px;
+
+}
+
+.footer-icons:hover {
+    color: red;
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.contactus {
+    padding-top: 20px;
+}
+
+.contactus h5 {
+    padding-bottom: 20px;
+}
+
+.contactus h5:hover {
+    color: red;
+
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.admin-page {
+    margin-top: 140px;
+
+}
+
+table,
+tr,
+th,
+td {
+    border: 1px solid rgb(93, 88, 88);
+    border-collapse: collapse;
+}
+
+table {
+
+    width: 1300px;
+}
+
+th {
+    color: black;
+    font-weight: bold;
+    background-color: gainsboro;
+}
+
+tr:hover {
+    background-color: rgb(62, 61, 61);
+    color: white;
+    transition: all .3s ease-in-out;
+}
+
+.admin-btn {
+
+    border: none;
 }
