@@ -20,7 +20,6 @@ function More() {
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph6"><img src="11.jpg"  className='rphoto' alt="" /></div>
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph7"><img src="3.jpg" className='rphoto'  alt="" /></div>
             <div className="col-lg-3 col-md-6 col-sm-12 photo ph8"><img src="2.jpg" className='rphoto'  alt="" /></div>
-         
           </div>
          
          </div>
