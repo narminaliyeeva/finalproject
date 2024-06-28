@@ -1,0 +1,244 @@
+{
+    "users":[
+        {
+            "id":1,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":2,
+            "mail" : "guseyngasanov@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":3,
+            "mail" : "@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":4,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":5,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":6,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":7,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":8,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":9,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":10,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":11,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":12,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":13,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":14,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        },
+        {
+            "id":15,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        }, {
+            "id":16,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        }, {
+            "id":17,
+            "mail" : "narminaliyeva@gmail.com",
+            "username" : "Narmin",
+            "password" : "14012010"
+        }
+        
+    ],
+    
+        "posts": [
+
+            {
+                "id":1,
+                "image":"https://unsplash.com/photos/two-girl-illustrations--tikpxRBcsA",
+                "content" : "Art is ewerything",
+                "likesCount": "278",
+                "userID": 1
+            },
+            
+            {
+                "id":2,
+                "image":"https://unsplash.com/photos/two-person-wearing-crew-neck-t-shirt-VSo5d9wlT7s",
+                "content" : "Art is ewerything",
+                "likesCount": "122",
+                "userID": 2
+            },
+            
+            {
+                "id":3,
+                "image":"https://unsplash.com/photos/a-row-of-parked-cars-on-a-city-street-GxlHugQRrog",
+                "content" : "Art is ewerything",
+                "likesCount": "133",
+                "userID": 3
+            },
+            {
+                "id":4,
+                "image":"https://unsplash.com/photos/black-flower-sketch-LWNKjKmxRrE",
+                "content" : "Art is ewerything",
+                "likesCount": "194",
+                "userID": 4
+            },
+            {
+                "id":5,
+                "image":"https://unsplash.com/photos/a-large-building-with-columns-and-lights-inside-of-it-aQb7ovT1hpo",
+                "content" : "Art is ewerything",
+                "likesCount": "376",
+                "userID": 5
+            },
+            {
+                "id":6,
+                "image":"https://unsplash.com/photos/the-sun-is-setting-behind-a-lighthouse-in-the-ocean-Dp0yocWLN-k",
+                "content" : "Art is ewerything",
+                "likesCount": "189",
+                "userID": 6
+            },
+            {
+                "id":7,
+                "image":"https://unsplash.com/photos/view-of-concrete-buildings-from-window-during-daytime-xclq1CPq1M4",
+                "content" : "Art is ewerything",
+                "likesCount": "85",
+                "userID": 7
+            },
+            {
+                "id":8,
+                "image":"https://unsplash.com/photos/white-and-black-round-ceiling-fKIaaJB7pG4",
+                "content" : "Art is ewerything",
+                "likesCount": "100",
+                "userID": 8
+            },
+            
+            {
+                "id":9,
+                "image":"https://unsplash.com/photos/brown-wooden-radiogram-Ynl50d2_oH4",
+                "content" : "Art is ewerything",
+                "likesCount": "149",
+                "userID": 9
+            },
+            
+            {
+                "id":10,
+                "image":"https://unsplash.com/photos/black-turntable-on-brown-wooden-table-TcSckNRL9J8",
+                "content" : "Art is ewerything",
+                "likesCount": "88",
+                "userID": 10
+            },
+            
+            {
+                "id":11,
+                "image":"https://unsplash.com/photos/a-crowd-of-people-looking-at-a-painting-c74qzYojXrA",
+                "content" : "Art is ewerything",
+                "likesCount": "173",
+                "userID": 11
+            },
+            
+            {
+                "id":12,
+                "image":"https://unsplash.com/photos/a-tall-tower-with-a-clock-on-the-top-of-it-c69J-wKf7MU",
+                "content" : "Art is ewerything",
+                "likesCount": "77",
+                "userID": 12
+            },
+            
+            {
+                "id":13,
+                "image":"https://unsplash.com/photos/a-bunch-of-white-flowers-with-green-leaves-KJFBMlTMLAo",
+                "content" : "Art is ewerything",
+                "likesCount": "78",
+                "userID": 13
+            },
+            
+            {
+                "id":14,
+                "image":"https://unsplash.com/photos/brown-building-RKmMIr63kTE",
+                "content" : "Art is ewerything",
+                "likesCount": "132",
+                "userID": 14
+            },
+            
+            {
+                "id":15,
+                "image":"https://unsplash.com/photos/photography-of-inside-black-structure--0gBnnMdQPw",
+                "content" : "Art is ewerything",
+                "likesCount": "95",
+                "userID": 15
+            },
+            
+            {
+                "id":16,
+                "image":"https://unsplash.com/photos/a-wall-with-writing-on-it-that-says-over-thinking-kills-your-happiness-p-oTPSD6r_U",
+                "content" : "Art is ewerything",
+                "likesCount": "100",
+                "userID": 16
+            },
+            
+            {
+                "id":17,
+                "image":"https://unsplash.com/photos/a-glass-vase-filled-with-water-and-orange-flowers-JnDgACnmYlc",
+                "content" : "Art is ewerything",
+                "likesCount": "125",
+                "userID": 17
+            }
+
+           
+        ]
+    
+
+
+}

@@ -9,8 +9,8 @@ function Navbar() {
        
           <ul>
             <li><Link to='/' className="links">Home</Link></li>
-            <li> <Link to='/about' className="links" >About</Link></li>
             <li><Link to='/contact' className="links">Contact</Link ></li>
+            <li><Link to='/userpofile' className="links">UserProfile</Link></li>
             <li><Link to='/admin' className="links">Admin</Link></li>
           </ul>
         

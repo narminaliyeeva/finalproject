@@ -263,14 +263,16 @@ ul li {
     border-radius: 5px;
     border: 2px solid rgb(0, 0, 0);
 }
-.block-icons{
+
+.block-icons {
     width: 320px;
     border: 1px solid rgb(229, 220, 220);
     text-align: center;
     margin-left: 5px;
     margin-right: 5px;
 }
-.block-icons:hover{
+
+.block-icons:hover {
     background-color: rgb(224, 223, 239);
     border: 1px solid rgb(216, 214, 211);
     color: rgb(61, 54, 54);
@@ -659,7 +661,8 @@ body {
     /* Formların genişliği */
 }
 
-.login-form,
+
+/* .login-form,
 .register-form {
     display: flex;
     flex-direction: column;
@@ -671,7 +674,7 @@ body {
 form div {
     margin-bottom: 15px;
     width: 100%;
-    /* Form elemanlarının genişliği */
+    /* Form elemanlarının genişliği 
 }
 
 input {
@@ -709,20 +712,21 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
+} */
+/* 
 .social-login {
     margin-top: 20px;
     width: 100%;
     /* Sosyal giriş butonlarının genişliği */
-}
+/* }
 
 .social-login button {
     width: 100%;
     margin-bottom: 10px;
-}
+} */
+*/
 
-.register-form form {
+/* .register-form form {
     margin-left: 20px;
     margin-bottom: 120px;
 }
@@ -730,7 +734,160 @@ a:hover {
 .login-form form {
     margin-left: 20px;
 
+} */
+body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.login-form {
+    max-width: 600px;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+}
+
+.login-form h2 {
+    text-align: center;
+
+}
+
+.login-form form {
+    display: flex;
+    margin-top: 60px;
+    align-items: flex-start;
+    margin-left: 80px;
+    flex-direction: column;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form .form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.login-form .form-options label {
+    display: flex;
+    align-items: center;
+}
+
+.login-form .form-options a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.login-form button[type="submit"] {
+    width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+    .login-form {
+        padding: 16px;
+    }
+
+    .login-form .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+
+
+.register-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.register-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+}
+
+.register-form h2 {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 80px;
+    margin-top: 60px;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.register-form button[type="submit"] {
+    padding: 12px;
+    width: 220px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .register-form {
+        padding: 16px;
+    }
+}
+
 
 .admin {
     margin-top: 130px;
@@ -766,11 +923,13 @@ a:hover {
     margin-left: 20px;
     color: rgb(57, 50, 50);
     cursor: pointer;
-   
+
 }
-.about-text:hover{
+
+.about-text:hover {
     color: #231c9e
 }
+
 .offer {
     width: 100%;
     font-weight: bold;
@@ -799,7 +958,7 @@ a:hover {
 }
 
 .about-content li:hover {
-    
+
     background-color: rgb(216, 214, 211);
 }
 
@@ -830,7 +989,8 @@ a:hover {
     color: rgb(61, 54, 54);
     margin-left: 20px;
 }
-.serve-text:hover{
+
+.serve-text:hover {
     cursor: pointer;
     color: #231c9e;
 }
@@ -918,4 +1078,130 @@ tr:hover {
 .admin-btn {
 
     border: none;
+}
+
+/* UserProfile */
+
+.user-profile-card {
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #0a036d, #7aa5f0);
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: 50px;
+    background-image: url('https://unsplash.com/photos/black-flower-sketch-LWNKjKmxRrE');
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.card-body p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.card-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card-stats div {
+    text-align: center;
+}
+
+.card-stats strong {
+    display: block;
+    font-size: 20px;
+}
+
+.show-more-btn {
+    background: #ff5f6d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.show-more-btn:hover {
+    background: #e14b5a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-profile-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture {
+        width: 80px;
+        height: 80px;
+        margin-top: -40px;
+    }
+
+    .card-body h2 {
+        font-size: 20px;
+    }
+
+    .card-body p {
+        font-size: 14px;
+    }
+}
+
+.like-btn {
+    border: rgb(145, 3, 3) 2px solid;
+    border-radius: 9999px;
+    padding: 10px 15px;
+    color: black;
+    font-weight: bold;
+   
+}
+
+.like {
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+
+.like-btn:hover {
+    background-color: rgb(240, 96, 96);
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+.image-content{
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.image-content:hover{
+    text-shadow: 5px -1px 3px rgba(99, 100, 108, 0.53);
+    cursor: pointer;
+    -o-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .4s ease-in-out;
 }

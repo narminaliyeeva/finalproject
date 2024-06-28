@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "json-server --watch data.json --port 8000"
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
@@ -21,6 +22,7 @@
     "browser-router": "^0.2.0",
     "chart.js": "^4.4.3",
     "icons": "^1.0.0",
+    "json-server": "^1.0.0-beta.1",
     "mdb-react-ui-kit": "^8.0.0",
     "react": "^18.3.1",
     "react-bootstrap-icons": "^1.11.4",

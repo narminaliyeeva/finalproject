@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GoogleLoginButton, FacebookLoginButton, TwitterLoginButton } from "react-social-login-buttons";
 
 const LoginForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log({ email, password, rememberMe });
+  };
+
   return (
     <div className="login-form">
       <h2>Login to your account</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
-          <input type="email" placeholder="Enter Email" required />
+          <input 
+            type="email" 
+            placeholder="Enter Email" 
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required 
+          />
         </div>
         <div>
-          <input type="password" placeholder="Enter Password" required />
+          <input 
+            type="password" 
+            placeholder="Enter Password" 
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required 
+          />
         </div>
-        <div>
+        <div className="form-options">
           <label>
-           Remember me <input type="checkbox" /> 
+            Remember me 
+            <input 
+              type="checkbox" 
+              checked={rememberMe}
+              onChange={(e) => setRememberMe(e.target.checked)}
+            /> 
           </label>
           <a href="#forgot-password">Forgot Password</a>
         </div>
