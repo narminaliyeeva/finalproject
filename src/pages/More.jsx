@@ -1,30 +1,39 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../components/Navbar'
+import { PiHeartLight } from "react-icons/pi";
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 function More() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios.get('http://localhost:8000/more')
+    .then(res => setData(res.data));
+  }, [])
   return (
     <>
     <Navbar/>
-    <div className="morephotos">
     <section className='photos'>
-    <div className="container">
-         <div className="row first ">
-            <div className="col-lg-3 col-md-6 col-sm-12  photo ph1"><img src="9.jpg"  className='rphoto' alt="" /> </div>
-            <div className="col-lg-3 col-md-6 col-sm-12  photo ph2"><img src="10.jpg" className='rphoto '  alt="" /></div>
-            <div className="col-lg-3 col-md-6 col-sm-12  photo ph3"><img src="2.jpg"  className='rphoto' alt="" /></div>
-            <div className="col-lg-3 col-md-6 col-sm-12  photo ph4"><img src="8.jpg"  className='rphoto' alt="" /></div>
+          <div className="container">
+            <div className="row first ">
+
+            {data?.map(item => (
+            <div key={item.id} className="col-lg-3 col-md-6 col-sm-12 photo">
+              <img src={item.image} className='rphoto' />
+              <h6 className='image-content'>{item.content}</h6>
+              
+                <button className="like-btn">
+                {item.likesCount}
+                <PiHeartLight className='like' />
+              </button>
+            </div>
+          ))}
+
           </div>
-          <div className="row second">
-            <div className="col-lg-3 col-md-6 col-sm-12 photo ph5"><img src="6.jpg" className='rphoto'  alt="" /></div>
-            <div className="col-lg-3 col-md-6 col-sm-12 photo ph6"><img src="11.jpg"  className='rphoto' alt="" /></div>
-            <div className="col-lg-3 col-md-6 col-sm-12 photo ph7"><img src="3.jpg" className='rphoto'  alt="" /></div>
-            <div className="col-lg-3 col-md-6 col-sm-12 photo ph8"><img src="2.jpg" className='rphoto'  alt="" /></div>
           </div>
-         
-         </div>
-    </section>
-    </div>
+        </section>
+  
+  
     </>
   )
 }

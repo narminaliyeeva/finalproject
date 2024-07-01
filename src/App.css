@@ -115,6 +115,7 @@ ul li {
 .photos {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 90px;
 }
 
 .photo {
@@ -621,45 +622,137 @@ body {
 .submit-button:hover {
     background-color: #0056b3;
 }
-
-.auth-container {
-    display: flex;
-    flex-direction: column;
+.auth-form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .auth-form h2 {
+    text-align: center;
+    margin-bottom: 5px;
+   
+  }
+  
+  
+  .auth-form form {
+    width: 300px;
+    margin-left: 40px;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    /* Tüm ekranı kaplasın */
-    padding: 20px;
-    border: 1px solid #ddd;
-    background: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.auth-toggle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .auth-form form div {
+    margin-bottom: 15px;
+  }
+  
+  .auth-form form input {
+    width: 100%;
+   
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .auth-form .form-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .auth-form .form-options label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .auth-form .form-options input {
+    margin-left: 5px;
+  }
+  
+  .auth-form .form-options a {
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  .auth-form .form-options a:hover {
+    text-decoration: underline;
+  }
+  
+  .auth-form form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-form form button:hover {
+    background-color: #45a049;
+  }
+  
+  .toggle-form {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
-}
-
-.auth-toggle button {
-    padding: 10px 20px;
-    border: none;
-    background: #ccc;
+    margin: 20px 0;
+  }
+  
+  .toggle-form button {
+    padding: 10px;
+    background-color: #007BFF;
     color: white;
-    cursor: pointer;
-    margin: 0 10px;
+    border: none;
     border-radius: 5px;
-}
-
-.auth-toggle .active {
-    background: #160cc8;
-}
-
-.auth-form {
-    width: 100%;
-    max-width: 400px;
-    /* Formların genişliği */
-}
+    cursor: pointer;
+  }
+  
+  .toggle-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .auth-form {
+      padding: 10px;
+    }
+  
+    .auth-form form input {
+      padding: 8px;
+    }
+  
+    .auth-form form button {
+      padding: 8px;
+    }
+  
+    .auth-form .form-options {
+      align-items: flex-start;
+    }
+  
+    .auth-form .form-options label,
+    .auth-form .form-options a {
+      margin-bottom: 10px;
+    }
+  
+    .toggle-form button {
+      padding: 8px;
+    }
+  }
+  
 
 
 /* .login-form,
@@ -744,85 +837,6 @@ html {
     justify-content: center;
 }
 
-.login-form {
-    max-width: 600px;
-    width: 100%;
-    padding: 16px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    box-sizing: border-box;
-    /* Ensures padding and border are included in the element's total width and height */
-}
-
-.login-form h2 {
-    text-align: center;
-
-}
-
-.login-form form {
-    display: flex;
-    margin-top: 60px;
-    align-items: flex-start;
-    margin-left: 80px;
-    flex-direction: column;
-}
-
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.login-form .form-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.login-form .form-options label {
-    display: flex;
-    align-items: center;
-}
-
-.login-form .form-options a {
-    text-decoration: none;
-    color: #007BFF;
-}
-
-.login-form button[type="submit"] {
-    width: 200px;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007BFF;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.login-form .social-login {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 16px;
-}
-
-@media (max-width: 600px) {
-    .login-form {
-        padding: 16px;
-    }
-
-    .login-form .form-options {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
 
 
 
@@ -840,9 +854,7 @@ html {
     max-width: 400px;
     width: 100%;
     padding: 16px;
-    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     box-sizing: border-box;
     /* Ensures padding and border are included in the element's total width and height */
@@ -857,8 +869,8 @@ html {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 80px;
-    margin-top: 60px;
+    margin-left: 60px;
+    margin-top: 30px;
 }
 
 .register-form input[type="text"],
@@ -1083,7 +1095,7 @@ tr:hover {
 /* UserProfile */
 
 .user-profile-card {
-    max-width: 400px;
+    max-width: 700px;
     margin: 0 auto;
     background: #fff;
     margin-top: 150px;
@@ -1135,6 +1147,17 @@ tr:hover {
     display: block;
     font-size: 20px;
 }
+.profile-image{
+    border-radius: 5px;
+    border: 1px dashed grey;
+    width: 200px;
+    height: 200px;
+}
+
+.content-likes p{
+   font-weight: bold;
+   font-size: 25px;
+}
 
 .show-more-btn {
     background: #ff5f6d;
@@ -1143,7 +1166,7 @@ tr:hover {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition:  0.3s;
 }
 
 .show-more-btn:hover {
@@ -1175,11 +1198,12 @@ tr:hover {
 
 .like-btn {
     border: rgb(145, 3, 3) 2px solid;
+    margin-bottom: 13px;
     border-radius: 9999px;
     padding: 10px 15px;
     color: black;
     font-weight: bold;
-   
+
 }
 
 .like {
@@ -1193,15 +1217,94 @@ tr:hover {
     -webkit-transition: all .2s ease-in-out;
     transition: all .4s ease-in-out;
 }
-.image-content{
+
+.image-content {
     margin-top: 40px;
     font-size: 24px;
     font-weight: bold;
 }
-.image-content:hover{
+
+.image-content:hover {
     text-shadow: 5px -1px 3px rgba(99, 100, 108, 0.53);
     cursor: pointer;
     -o-transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     transition: all .4s ease-in-out;
+}
+
+.view-btn {
+    margin-top: 35px;
+    margin-right: 5px;
+    padding: 8px 30px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: #ebe2e2;
+    color: black;
+}
+
+.view-btn:hover {
+    background-color: #596FB7;
+    color: white;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+/* ADMIN */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.responsive-table thead {
+    background-color: #f2f2f2;
+}
+
+.responsive-table th,
+.responsive-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.responsive-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.image img{
+    width:150px;
+    height: 150px;
+}
+
+@media (max-width: 600px) {
+    .responsive-table thead {
+        display: none;
+    }
+
+    .responsive-table tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .responsive-table td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    .responsive-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
 }

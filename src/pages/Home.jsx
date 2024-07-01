@@ -64,7 +64,7 @@ function Home() {
               <h1 >Recommended for you  </h1>
             </div>
             <div className="col-lg-6 col-md-12">
-              <button className='bookbtn'>View more</button>
+              <Link to='/more'><button className='bookbtn'>View more</button></Link>
             </div>
           </div>
 
@@ -74,14 +74,14 @@ function Home() {
 
         <section className='photos'>
           <div className="container">
-            <div className="row first ">
+            <div className="row  ">
 
-            {data.map(item => (
+            {data?.map(item => (
             <div key={item.id} className="col-lg-3 col-md-6 col-sm-12 photo">
               <img src={item.image} className='rphoto' />
-              <h6 className='image-content'>{item.content}</h6>
+              <p className='image-content'>{item.content}</p>
               <Link to='/more'>
-               <button className='viewmore'>view more</button>
+               <button className='view-btn'>View more</button>
               </Link>
                 <button className="like-btn">
                 {item.likesCount}

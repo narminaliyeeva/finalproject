@@ -1,90 +1,95 @@
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-
-
+import axios from 'axios';
+import Navbar from '../components/Navbar'
 
 const Add = () => {
-  const [title, setTitle] = useState('');
-  const [tags, setTags] = useState('');
-  const [publishDate, setPublishDate] = useState('');
+  const [content, setContent] = useState('');
+  const [fileKey, setFileKey] = useState(Date.now()); // Unique key for file input
   const [file, setFile] = useState(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log('Title:', title);
-    console.log('Tags:', tags);
-    console.log('Publish Date:', publishDate);
-    console.log('File:', file);
-  };
-  
 
-  const onSubmit = (data) => {
-    axios.post('http://localhost:3000/data/', { ...data, file: image })
-    .then(res=>console.log(res.data))
-  }
-
-  const convertToBase64 =(file)=>{
-    let reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      setimage(reader.result)
+    // Check if file is selected
+    if (!file) {
+      alert('Please select a file');
+      return;
     }
-   }
+
+    try {
+      // Convert file to base64
+      const imageBase64 = await convertToBase64(file);
+
+      // Prepare data for submission
+      const formData = {
+        content: content,
+        image: imageBase64 // Base64 encoded image
+      };
+
+      // Example POST request using Axios
+      const response = await axios.post('http://localhost:8000/posts/', formData);
+      console.log('Response:', response.data);
+      // Handle success, e.g., navigate to another page
+
+      // Clear form fields
+      setContent('');
+      setFile(null);
+      setFileKey(Date.now()); // Update key to reset file input
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error
+    }
+  };
+
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        resolve(reader.result); // Resolve with base64 encoded string
+      };
+      reader.onerror = (error) => {
+        reject(error);
+      };
+    });
+  };
 
   return (
-   <>
-   <Navbar/>
-   
-    <div className="add-page">
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>
-            Title:
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-            />
-          </label>
-        </div>
-        
-        <div className="form-group">
-          <label>
-            Tags:
-            <input
-              type="text"
-              value={tags}
-              onChange={(e) => setTags(e.target.value)}
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Publish Date:
-            <input
-              type="datetime-local"
-              value={publishDate}
-              onChange={(e) => setPublishDate(e.target.value)}
-            />
-          </label>
-        </div>
-        <div className="form-group">
-          <label>
-            Upload File:
-            <input
-              type="file"
-              onChange={(e) => setFile(e.target.files[0])}
-            />
-          </label>
-        </div>
-        <div className="form-buttons">
-          <button type="submit">Add new photo</button>
-          <button type="button">Cancel</button>
-        </div>
-      </form>
-    </div>
-   </>
+    <>
+      <Navbar />
+      <div className="add-page">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>
+              Content:
+              <textarea
+                value={content}
+                onChange={(e) => setContent(e.target.value)}
+                required
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label>
+              Upload File:
+              <input
+                key={fileKey} // Key to force re-render of input
+                type="file"
+                onChange={(e) => setFile(e.target.files[0])}
+              />
+            </label>
+          </div>
+          <div className="form-buttons">
+            <button type="submit">Add new photo</button>
+            <button type="button" onClick={() => {
+              setContent('');
+              setFile(null);
+              setFileKey(Date.now()); // Update key to reset file input
+            }}>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

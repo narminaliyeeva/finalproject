@@ -11,7 +11,7 @@ function Navbar() {
             <li><Link to='/' className="links">Home</Link></li>
             <li><Link to='/contact' className="links">Contact</Link ></li>
             <li><Link to='/userpofile' className="links">UserProfile</Link></li>
-            <li><Link to='/admin' className="links">Admin</Link></li>
+          
           </ul>
         
        <ul>
