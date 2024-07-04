@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 const Add = () => {
   const [content, setContent] = useState('');
-  const [fileKey, setFileKey] = useState(Date.now()); // Unique key for file input
+  const [fileKey, setFileKey] = useState(Date.now()); 
   const [file, setFile] = useState(null);
 
   const handleSubmit = async (event) => {
@@ -17,27 +17,23 @@ const Add = () => {
     }
 
     try {
-      // Convert file to base64
+   
       const imageBase64 = await convertToBase64(file);
 
-      // Prepare data for submission
       const formData = {
         content: content,
-        image: imageBase64 // Base64 encoded image
+        image: imageBase64 
       };
 
-      // Example POST request using Axios
       const response = await axios.post('http://localhost:8000/posts/', formData);
       console.log('Response:', response.data);
-      // Handle success, e.g., navigate to another page
-
-      // Clear form fields
+      
       setContent('');
       setFile(null);
-      setFileKey(Date.now()); // Update key to reset file input
+      setFileKey(Date.now()); 
     } catch (error) {
       console.error('Error:', error);
-      // Handle error
+      
     }
   };
 
@@ -73,18 +69,18 @@ const Add = () => {
             <label>
               Upload File:
               <input
-                key={fileKey} // Key to force re-render of input
+                key={fileKey} 
                 type="file"
                 onChange={(e) => setFile(e.target.files[0])}
               />
             </label>
           </div>
           <div className="form-buttons">
-            <button type="submit">Add new photo</button>
+            <button type="submit">Add new post</button>
             <button type="button" onClick={() => {
               setContent('');
               setFile(null);
-              setFileKey(Date.now()); // Update key to reset file input
+              setFileKey(Date.now()); /
             }}>Cancel</button>
           </div>
         </form>

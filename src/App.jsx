@@ -10,6 +10,7 @@ import './App.css';
 import Contact from './pages/Contact'
 import More from './pages/More';
 import Login from './pages/Login';
+import Detail from './pages/Detail';
 import UserProfile from './pages/UserProfile';
 
 
@@ -21,6 +22,7 @@ function App() {
          <Route element={<Admin/>} path='/admin'></Route>
          <Route element={<Login/>} path='/login'></Route>
          <Route element={<UserProfile/>} path='/userpofile'></Route>
+        <Route path="/userprofile/:id" element={<Detail/>} /> 
           <Route element={<Add/>} path='/add'></Route>
           <Route element={<More/>} path='/more'></Route>
           <Route element={<Contact/>} path='/contact'></Route>

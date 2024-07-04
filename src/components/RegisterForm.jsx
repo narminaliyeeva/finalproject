@@ -39,7 +39,7 @@ const RegisterForm = () => {
 
   return (
     <div className="register-form">
-      <h2>Create a new account</h2>
+ 
       <form onSubmit={handleSubmit}>
         <div>
           <input 
