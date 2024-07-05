@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const Admin = () => {
     const [data, setData] = useState([]);
-    const [user, setUser] = useState([])
- 
+    
 
     useEffect(() => {
         axios.get('http://localhost:8000/posts')
@@ -18,48 +17,14 @@ const Admin = () => {
        
     };
 
-    useEffect(() => {
-        axios.get('http://localhost:8000/users')
-            .then(res => setUser(res.user))
-           
-    }, []);
-
-    const deleteUser = (id) => {
-        axios.delete(`http://localhost:8000/users/${id}`)
-            .then(res => setUser(res.user))
-       
-    };
+  
 
 
  
 
     return (
         <>
-             
-            <div className="table-container">
-                <table className="responsive-table">
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Username</th>
-                            <th>Password</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {user?.map((item) => (
-                            <tr key={item.id}>
-                                <td>{item.id}</td>
-                                <td>{item.username}</td>
-                                <td>{item.mail}</td>
-                                <td>{item.password}</td>
-                                <td><button onClick={() => deleteUser(item.id)}>Delete</button></td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div> 
+          
              
             <div className="table-container">
                 <table className="responsive-table">
